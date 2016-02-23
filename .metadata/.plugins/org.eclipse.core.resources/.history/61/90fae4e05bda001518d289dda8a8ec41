@@ -1,0 +1,12 @@
+package view;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import model.Model;
+
+@XmlRootElement
+public class View<T extends Model<?>> {
+	
+	protected T entity;
+	
+}

@@ -1,0 +1,12 @@
+package controller;
+
+import view.View;
+import model.Model;
+
+public class WSGenerico<T extends Model<?>, E extends View<?>> {
+	
+	public List<View> getViews(List<Model> model) {
+		
+	}
+	
+}

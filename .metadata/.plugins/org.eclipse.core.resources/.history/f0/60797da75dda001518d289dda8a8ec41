@@ -1,0 +1,10 @@
+package view;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+public class ProdutoView extends View<Produto> {
+
+	
+	
+}

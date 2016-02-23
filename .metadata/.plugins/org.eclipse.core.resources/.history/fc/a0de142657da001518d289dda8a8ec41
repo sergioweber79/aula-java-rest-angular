@@ -1,0 +1,27 @@
+package controller;
+
+import java.util.List;
+
+import javax.ws.rs.Path;
+
+import model.Produto;
+
+@Path("produto")
+public class ProdutoWS extends WSGenerico<Produto> {
+
+	public void create(Produto produto) {
+	}
+	
+	public Produto find(Long produto) {
+		return null;
+	}
+	
+	public List<Produto> findAll() {
+		return null;
+	}
+	
+	public void update() {
+		
+	}
+
+}

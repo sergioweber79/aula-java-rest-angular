@@ -1,0 +1,21 @@
+package controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Model;
+import view.View;
+
+public class WSGenerico<T extends Model<?>, E extends View<T>> {
+	
+	@SuppressWarnings("unchecked")
+	public List<E> getViews(List<T> models) {
+		List<E> views = new ArrayList<>();
+		for(Model<?> m : models) {
+			// TODO 
+			views.add((E)new View<>(m));
+		}
+		return views;
+	}
+	
+}

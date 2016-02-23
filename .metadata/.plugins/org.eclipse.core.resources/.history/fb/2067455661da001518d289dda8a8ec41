@@ -1,0 +1,19 @@
+package dao;
+
+import java.math.BigDecimal;
+import java.util.Date;
+
+import model.Produto;
+
+public class ProdutoDAO extends DAO<Produto> {
+
+	public ProdutoDAO() {
+		super(Produto.class);
+	}
+
+	@Override
+	public Produto find(Object id) {
+		return Produto.builder().descricao("coca-cola").id(1L).validade(new Date()).valor(new BigDecimal("5435.9")).build();
+	}
+	
+}

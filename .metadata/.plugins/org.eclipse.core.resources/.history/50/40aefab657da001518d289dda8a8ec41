@@ -1,0 +1,38 @@
+package controller;
+
+import java.util.List;
+
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+
+import model.Produto;
+
+@Path("produto")
+public class ProdutoWS extends WSGenerico<Produto> {
+
+	@POST
+	public void create(Produto produto) {
+	}
+	
+	@GET
+	public Produto find(Long produto) {
+		return null;
+	}
+	
+	@GET
+	public List<Produto> findAll() {
+		return null;
+	}
+	
+	@PUT
+	public void update(Produto produto) {
+	}
+	
+	@DELETE
+	public void delete(Produto produto) {
+	}
+
+}

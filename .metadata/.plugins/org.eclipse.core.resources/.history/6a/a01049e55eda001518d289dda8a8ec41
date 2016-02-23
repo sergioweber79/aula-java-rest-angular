@@ -1,0 +1,42 @@
+package view;
+
+import java.text.SimpleDateFormat;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+import model.Categoria;
+import model.Produto;
+
+@XmlRootElement
+public class ProdutoView extends View<Produto> {
+
+	public ProdutoView() {
+		super(Produto.class);
+	}
+	
+	public Long getId() {
+		return getEntity().getId();
+	}
+	
+	public void setId(Long id) {
+	}
+	
+	public String getDescricao() {
+		return getEntity().getDescricao();
+	}
+	
+	public void setDescricao() {
+	}
+	
+	public String getValidade() {
+		return new SimpleDateFormat("dd/MM/yyyy").format(getEntity().getValidade());
+	}
+	
+	
+	
+	public Long getCategoria() {
+		Categoria c = getEntity().getCategoria();
+		return c == null ? 0 : c.getId();
+	}
+	
+}

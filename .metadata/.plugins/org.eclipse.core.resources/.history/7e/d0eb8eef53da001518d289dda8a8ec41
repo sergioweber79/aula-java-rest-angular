@@ -1,0 +1,41 @@
+package dao;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import model.Model;
+import utils.EntityManagerUtils;
+
+public class DAO<T extends Model<?>> {
+
+	private Class<T> klazz;
+	
+	public DAO(Class<T> klazz) {
+		this.klazz = klazz;
+	}
+
+	public void create(T entity) {
+		EntityManagerUtils.criarEntityManager().persist(entity);
+	}
+	
+	public T find(Object id) {
+		return EntityManagerUtils.criarEntityManager().find(klazz, id);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<T> findAll() {
+		Query query = EntityManagerUtils
+				.criarEntityManager().createQuery("from ");
+		return query.getResultList();
+	}
+	
+	public void update(T entity) {
+		EntityManagerUtils.criarEntityManager().merge(entity);
+	}
+	
+	public void delete(T entity) {
+		EntityManagerUtils.criarEntityManager().remove(entity);
+	}
+	
+}

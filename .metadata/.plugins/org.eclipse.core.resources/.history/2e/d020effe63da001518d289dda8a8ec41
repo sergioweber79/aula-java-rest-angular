@@ -1,0 +1,19 @@
+package controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import view.View;
+import model.Model;
+
+public class WSGenerico<T extends Model<?>, E extends View<Model<?>>> {
+	
+	public List<View<?>> getViews(List<Model<?>> models) {
+		List<View<?>> views = new ArrayList<>();
+		for(Model<?> m : models) {
+			views.add(new View<>(m));
+		}
+		return views;
+	}
+	
+}
