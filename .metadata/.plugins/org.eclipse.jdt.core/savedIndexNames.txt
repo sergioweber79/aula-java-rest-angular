@@ -1,0 +1,19 @@
+INDEX VERSION 1.127+/home/java08/workspace/aula-java/aula-java-rest/.metadata/.plugins/org.eclipse.jdt.core
+3039382196.index
+2702349449.index
+3570423268.index
+942079895.index
+3341498549.index
+1804074643.index
+3640391321.index
+2396612121.index
+1317964244.index
+3084331035.index
+443793019.index
+903541306.index
+4108955676.index
+28907821.index
+264412873.index
+3911834949.index
+2842041751.index
+3029562558.index
