@@ -2,8 +2,10 @@ package dao;
 
 import java.util.List;
 
-import model.Model;
+import javax.persistence.EntityManager;
+
 import utils.EntityManagerUtils;
+import model.Model;
 
 public class DAO<T extends Model<?>> {
 
