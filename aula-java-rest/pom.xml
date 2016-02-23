@@ -36,12 +36,14 @@
 			<version>9.3-1100-jdbc4</version>
 		</dependency>
 
+		<!-- Gerencia dos web services -->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-server</artifactId>
 			<version>1.8</version>
 		</dependency>
 
+		<!-- Geração de json -->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-json</artifactId>
