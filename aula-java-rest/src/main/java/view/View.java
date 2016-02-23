@@ -1,0 +1,6 @@
+package view;
+
+import model.Model;
+
+public class View<T extends Model<?>> {
+}

@@ -1,0 +1,6 @@
+package controller;
+
+@Path("produto")
+public class ProdutoWS {
+
+}

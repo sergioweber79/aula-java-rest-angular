@@ -1,0 +1,9 @@
+package model;
+
+public class Produto implements Model<Long> {
+
+	public Long getId() {
+		return null;
+	}
+
+}

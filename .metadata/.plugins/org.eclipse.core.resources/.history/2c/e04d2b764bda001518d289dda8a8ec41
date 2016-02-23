@@ -1,0 +1,7 @@
+package controller;
+
+import javax.ws.rs.Path;
+
+@Path("produto")
+public class ProdutoWS extends WSGenerico<Produto> {
+}

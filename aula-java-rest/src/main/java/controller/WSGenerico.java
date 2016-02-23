@@ -1,5 +1,6 @@
 package controller;
 
-public class WSGenerico {
+import model.Model;
 
+public class WSGenerico<T extends Model<?>> {
 }
