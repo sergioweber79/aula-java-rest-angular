@@ -23,7 +23,6 @@ public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
 	
 	public ProdutoWS() {
 		super(ProdutoView.class);
-		dao = new ProdutoDAO();
 	}
 	
 	@POST
@@ -44,7 +43,8 @@ public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
 	@Path("find-all")
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public List<ProdutoView> findAll() {
-		return getViews(dao.findAll());
+		List<ProdutoView> views = getViews(dao.findAll()); 
+		return views;
 	}
 	
 	@PUT

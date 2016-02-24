@@ -1,5 +1,33 @@
+<!DOCTYPE html>
 <html>
-	<body>
-		<h2>Hello World!</h2>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/module/app.js"></script>
+	<script src="js/module/menu.module.js"></script>
+    <script src="js/controller/menu.controller.js"></script>
+    <script src="js/module/produto.module.js"></script>
+    <script src="js/service/produto.service.js"></script>
+    <script src="js/controller/produto.controller.js"></script>
+	
+	<link rel="stylesheet" href="css/menu.css">
+
+    <body ng-app="appModule">
+			
+		<div ng-controller="menuCtrl">
+			<p>Menu</p>
+			<div>
+				<ul id="menu">
+					<li ng-repeat="item in menu" 
+					ng-click='redirect(item.link)'>
+						{{item.titulo}}
+					</li>
+				</ul>
+			</div>
+	
+			<div>{{conteudoTexto}}</div>
+		</div>
+			
+		<div ng-view></div>	
+			
 	</body>
 </html>

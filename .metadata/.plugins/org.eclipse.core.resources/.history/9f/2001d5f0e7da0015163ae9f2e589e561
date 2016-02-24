@@ -1,0 +1,33 @@
+package controller;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Model;
+import view.View;
+
+public class WSGenerico<T extends Model<?>, E extends View<T>> {
+	
+	private Class<E> viewClass;
+	
+	public WSGenerico(Class<E> viewClass, Class<T> clazz2) {
+		this.viewClass = viewClass;
+	}
+	
+	public List<E> getViews(List<T> models) {
+		List<E> views = new ArrayList<>();
+		for(T model : models) {
+			try {
+				Constructor<E> c = viewClass.getConstructor(m.getClass());
+				E e = c.newInstance(m);
+				views.add(e);
+			} catch (InstantiationException | IllegalAccessException | NoSuchMethodException | SecurityException | IllegalArgumentException | InvocationTargetException e) {
+				e.printStackTrace();
+			}
+		}
+		return views;
+	}
+	
+}
