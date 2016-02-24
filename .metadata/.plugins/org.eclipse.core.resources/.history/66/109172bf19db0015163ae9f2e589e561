@@ -1,0 +1,14 @@
+angular.module('produto')
+.controller('ProdutoCtrl', 
+	function($scope, ProdutoService) {
+		
+		$scope.produtos = [];
+		
+		$scope.findAll = function() {
+			ProdutoService.findAll().then(
+					
+			);
+		}
+		
+	}
+);

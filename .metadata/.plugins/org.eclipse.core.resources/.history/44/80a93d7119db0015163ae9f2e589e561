@@ -1,0 +1,8 @@
+angular.module('produto')
+.controller('produtoCtrl', 
+	function($scope, produtoService) {
+		$scope.produtos = [];
+		
+		
+	}
+);

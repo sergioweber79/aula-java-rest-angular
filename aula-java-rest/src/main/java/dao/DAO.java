@@ -15,7 +15,7 @@ public class DAO<T extends Model<?>> {
 	public DAO(Class<T> klazz) {
 		this.klazz = klazz;
 	}
-
+	
 	public void create(T entity) {
 		EntityManager em = EntityManagerUtils.criarEntityManager();
 		em.persist(entity);

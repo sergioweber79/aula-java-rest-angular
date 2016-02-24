@@ -1,0 +1,6 @@
+angular.module('produto')
+.controller('produtoCtrl', 
+	function($scope) {
+		
+	}
+);

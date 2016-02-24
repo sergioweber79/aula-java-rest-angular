@@ -12,22 +12,17 @@
 	<link rel="stylesheet" href="css/menu.css">
 
     <body ng-app="appModule">
-			
 		<div ng-controller="menuCtrl">
 			<p>Menu</p>
 			<div>
 				<ul id="menu">
-					<li ng-repeat="item in menu" 
-					ng-click='redirect(item.link)'>
+					<li ng-repeat="item in menu" ng-click='redirect(item.link)'>
 						{{item.titulo}}
 					</li>
 				</ul>
 			</div>
-	
-			<div>{{conteudoTexto}}</div>
 		</div>
 			
 		<div ng-view></div>	
-			
 	</body>
 </html>

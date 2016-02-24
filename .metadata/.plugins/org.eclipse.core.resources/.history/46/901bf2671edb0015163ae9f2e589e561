@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <script src="resources/js/angular.js"></script>
+    <script src="resources/js/angular-route.js"></script>
+    
+	<script src="resources/js/module/produto.module.js"></script>
+    <script src="resources/js/controller/produto.controller.js"></script>
+    <script src="resources/js/service/produto.service.js"></script>
+	
+	<link rel="stylesheet" href="css/menu.css">
+
+    <body ng-app="produto">
+    	<div ng-controller="ProdutoCtrl">
+			Descrição: <input type="text" ng-model="produto.descricao"/>
+			<br/>
+			Valor: <input type="text" ng-model="produto.valor"/>    			
+    		<br/>
+    		Validade: <input type="date" ng-model="produto.validade"/>
+    		<br/>
+    		Categoria: <select ng-model="produto.categoria">
+    			<option ng-repeat="c in categorias">{{c.descricao}}</option>
+   			</select>
+    		
+    		<br/>
+	    	<button ng-click="create()">FIND-ALL</button>
+	    	<button ng-click="findAll()">CREATE</button>
+
+			<br/>
+	    	<p ng-repeat="p in produtos">{{p}}</p>
+    	</div>
+	</body>
+</html>

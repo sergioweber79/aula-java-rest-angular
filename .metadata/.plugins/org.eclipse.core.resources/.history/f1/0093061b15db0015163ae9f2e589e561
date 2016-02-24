@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <script src="resources/js/angular.js"></script>
+    <script src="resources/js/angular-route.js"></script>
+    
+	<script src="resources/js/module/produto.module.js"></script>
+    <script src="resources/js/controller/produto.controller.js"></script>
+	
+	<link rel="stylesheet" href="css/menu.css">
+
+    <body ng-app="produto">
+    
+	</body>
+</html>

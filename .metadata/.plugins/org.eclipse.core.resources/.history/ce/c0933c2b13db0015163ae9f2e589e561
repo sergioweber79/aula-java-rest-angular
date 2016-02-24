@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <script src="resources/js/angular.js"></script>
+    <script src="resources/js/angular-route.js"></script>
+    <script src="resources/js/module/app.js"></script>
+	<script src="resources/js/module/menu.module.js"></script>
+    <script src="resources/js/controller/menu.controller.js"></script>
+    <script src="resources/js/module/produto.module.js"></script>
+    <script src="resources/js/service/produto.service.js"></script>
+    <script src="resources/js/controller/produto.controller.js"></script>
+	
+	<link rel="stylesheet" href="css/menu.css">
+
+    <body ng-app="appModule">
+		<div ng-controller="menuCtrl">
+			<p>Menu</p>
+			<div>
+				<ul id="menu">
+					<li ng-repeat="item in menu" ng-click='redirect(item.link)'>
+						{{item.titulo}}
+					</li>
+				</ul>
+			</div>
+	
+			<div>{{conteudoTexto}}</div>
+		</div>
+			
+		<div ng-view></div>	
+	</body>
+</html>

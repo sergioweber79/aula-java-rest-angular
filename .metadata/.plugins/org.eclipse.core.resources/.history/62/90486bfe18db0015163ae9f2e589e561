@@ -1,0 +1,31 @@
+angular.module('produto')
+.service(
+	'produtoService',
+	[	
+	 	'$http',
+	 	function produtoService($http) {
+	 		
+	 		var url = "http://localhost:8080/aula-java-rest/rest/produto/";
+	 		
+	 		produtoService.data = {};
+	 		produtoService.status = {};
+	 		produtoService.error = {};
+	 		
+	 		var callbackSuccess = function(data, status) {
+	 			
+	 		};
+	 		
+	 		var callbackError = function() {
+	 			
+	 		};
+	 		
+	 		produtoService.findAll = function() {
+	 			return $http.get(url + 'find-all')
+	 			.success()
+	 			.error();
+	 		};
+	 		
+	 		return produtoService;
+	 	}
+	]	
+);

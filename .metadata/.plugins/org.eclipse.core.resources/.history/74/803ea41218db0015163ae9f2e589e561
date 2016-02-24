@@ -1,0 +1,15 @@
+angular.module('produto')
+.service(
+	'produtoService',
+	[	
+	 	'$http',
+	 	function produtoService($http) {
+	 		
+	 		produtoService.findAll = function() {
+	 			return $http.get()
+	 		}
+	 		
+	 		return produtoService;
+	 	}
+	]	
+);

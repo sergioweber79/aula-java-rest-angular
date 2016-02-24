@@ -1,0 +1,21 @@
+angular.module('produto')
+.controller('ProdutoCtrl', 
+	function($scope, ProdutoService) {
+		
+		$scope.produtos = [];
+		
+		var error = function() {
+			console.log(ProdutoService.error);
+		}
+		
+		$scope.findAll = function() {
+			ProdutoService.findAll().then(
+				function() {
+					$scope.produtos = ProdutoService.data;
+					ProdutoService.data = {};
+				}
+			);
+		}
+		
+	}
+);

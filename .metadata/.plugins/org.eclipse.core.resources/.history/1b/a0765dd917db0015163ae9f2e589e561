@@ -1,0 +1,11 @@
+angular.module('produto')
+.service(
+	'produtoService',
+	[	
+	 	'$http',
+	 	function produtoService() {
+	 		
+	 		return produtoService;
+	 	}
+	]	
+);
