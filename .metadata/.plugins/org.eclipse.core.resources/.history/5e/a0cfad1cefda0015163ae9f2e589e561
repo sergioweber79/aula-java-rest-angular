@@ -4,7 +4,7 @@
 <html>
 	<body ng-app="myApp2">
 		
-		<script src="resources/js/angular.js"></script>
+		<script src="js/angular.js"></script>
 
 		<div ng-controller="directiveCtrl">
    			<redirect ng-click="funcao()" path="rest">Redirecionar</redirect>
@@ -19,7 +19,7 @@
 	        }).directive('redirect', function () {
 	            return {
 	                restrict: 'E',
-	                //'E' significa que é restrito a elementos
+	                //'E' significa que � restrito a elementos
 	                replace: true,
 	                scope:  {
 	                    path: '='

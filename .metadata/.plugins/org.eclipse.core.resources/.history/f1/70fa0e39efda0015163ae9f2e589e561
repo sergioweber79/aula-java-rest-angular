@@ -3,7 +3,7 @@
 
 <!DOCTYPE html>
 <html>
-    <script src="resources/js/angular.js"></script>
+    <script src="js/angular.js"></script>
     <body ng-app="appModule">
 	    <div ng-controller="myCtrl">
 	       <div>

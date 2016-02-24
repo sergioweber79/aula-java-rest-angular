@@ -4,7 +4,7 @@
 <html>
 	<body ng-app="myApp2">
 		
-		<script src="resources/js/angular.js"></script>
+		<script src="js/angular.js"></script>
 
 		<div ng-controller="directiveCtrl">
    			<redirect ng-click="funcao()" path="rest">Redirecionar</redirect>

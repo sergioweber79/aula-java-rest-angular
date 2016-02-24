@@ -20,3 +20,13 @@
 127.0.0.1 - - [24/Feb/2016:08:59:37 -0300] "GET /aula-java-rest/rest/produto/find-all HTTP/1.1" 500 3160
 127.0.0.1 - - [24/Feb/2016:08:59:56 -0300] "GET / HTTP/1.1" 404 951
 127.0.0.1 - - [24/Feb/2016:08:59:56 -0300] "GET /aula-java-rest/rest/produto/find-all HTTP/1.1" 500 3160
+127.0.0.1 - - [24/Feb/2016:09:02:07 -0300] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [24/Feb/2016:09:02:26 -0300] "GET /aula-java-rest/rest/produto/find-all HTTP/1.1" 200 1294
+127.0.0.1 - - [24/Feb/2016:09:02:45 -0300] "GET /aula-java-rest/draggable2.html HTTP/1.1" 200 1449
+127.0.0.1 - - [24/Feb/2016:09:02:45 -0300] "GET /aula-java-rest/js/angular.js HTTP/1.1" 404 1007
+127.0.0.1 - - [24/Feb/2016:09:03:26 -0300] "GET /aula-java-rest/draggable2.html HTTP/1.1" 200 1458
+127.0.0.1 - - [24/Feb/2016:09:03:26 -0300] "GET /aula-java-rest/resource/js/angular.js HTTP/1.1" 404 1025
+127.0.0.1 - - [24/Feb/2016:09:03:39 -0300] "GET /aula-java-rest/draggable2.html HTTP/1.1" 304 -
+127.0.0.1 - - [24/Feb/2016:09:03:39 -0300] "GET /aula-java-rest/resource/js/angular.js HTTP/1.1" 404 1025
+127.0.0.1 - - [24/Feb/2016:09:04:50 -0300] "GET /aula-java-rest/draggable2.html HTTP/1.1" 200 1459
+127.0.0.1 - - [24/Feb/2016:09:04:50 -0300] "GET /aula-java-rest/resources/js/angular.js HTTP/1.1" 200 1127642

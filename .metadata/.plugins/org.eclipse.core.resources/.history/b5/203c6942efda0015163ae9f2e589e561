@@ -17,5 +17,5 @@
 	            $scope.name = "Renan";
 	        });
 	    </script>
-	</body>
+</body>
 </html>

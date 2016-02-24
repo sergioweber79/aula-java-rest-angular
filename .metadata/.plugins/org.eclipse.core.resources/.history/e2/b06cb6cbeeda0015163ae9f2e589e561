@@ -4,7 +4,7 @@
   		<meta charset="UTF-8">
   		<title></title>
 
-    	<script src="resources/js/angular.js"></script>
+    	<script src="resource/js/angular.js"></script>
   		<script>
   		angular.module('dragModule', [])
   			.directive('myDraggable', ['$document', function($document) {

@@ -4,7 +4,7 @@
   		<meta charset="UTF-8">
   		<title></title>
 
-    	<script src="resources/js/angular.js"></script>
+    	<script src="js/angular.js"></script>
   		<script>
   		angular.module('dragModule', [])
   			.directive('myDraggable', ['$document', function($document) {
@@ -43,7 +43,10 @@
         				}
       				}
     			};
-  			}]);
+  }]);
+})
+
+  		
   		</script>
 	</head>
 	<body ng-app="dragModule">
