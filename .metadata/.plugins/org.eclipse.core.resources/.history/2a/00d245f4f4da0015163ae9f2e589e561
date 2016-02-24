@@ -21,7 +21,8 @@ public class WSGenerico<T extends Model<?>, E extends View<T>> {
 		for(T model : models) {
 			try {
 				Constructor<E> constructor = viewClass.getConstructor(model.getClass());
-				views.add(constructor.newInstance(model));
+				E entity = constructor.newInstance(model);
+				views.add(entity);
 			} catch (InstantiationException 
 					| IllegalAccessException 
 					| NoSuchMethodException

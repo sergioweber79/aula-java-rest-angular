@@ -49,7 +49,7 @@ public class ProdutoView extends View<Produto> {
 	
 	public Long getCategoria() {
 		Categoria c = getEntity().getCategoria();
-		return c == null ? null : c.getId();
+		return c == null ? 0 : c.getId();
 	}
 	
 	public void setCategoria(Categoria categoria) {
