@@ -1,0 +1,12 @@
+angular.module('categoria', [])
+.controller('CategoriaCtrl',
+	function($scope) {
+		
+		$scope.categorias = [];
+		
+		$scope.findAll = function() {
+			
+		};
+	
+	}
+);

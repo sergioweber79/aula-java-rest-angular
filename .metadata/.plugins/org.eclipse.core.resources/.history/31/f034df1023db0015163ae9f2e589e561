@@ -1,0 +1,22 @@
+angular.module('categoria', [])
+.controller('CategoriaCtrl',
+	function($scope, CategoriaService) {
+		
+		$scope.categorias = [];
+		
+		var error = function() {
+			
+		}
+		
+		$scope.findAll = function() {
+			CategoriaService.findAll().then(
+				function() {
+					$scope.categorias = CategoriaService.data;
+					CategoriaService.data = {};
+				},
+				error
+			);
+		};
+	
+	}
+);

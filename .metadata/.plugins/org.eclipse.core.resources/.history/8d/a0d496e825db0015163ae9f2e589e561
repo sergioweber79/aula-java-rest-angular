@@ -1,0 +1,38 @@
+angular.module('produto')
+.controller('ProdutoCtrl', 
+	function($scope, ProdutoService) {
+		
+		$scope.produto = {};
+		$scope.produtos = [];
+		$scope.categorias = [];
+		
+		$scope.update = false;
+		$scope.mudaUpdate = function() {
+			$scope.update = !$scope.update;	
+		};		
+		var error = function() {
+			console.log('Status = ' + ProdutoService.status + '\n');
+			console.log('Erro = ' + ProdutoService.error + '\n');
+		}
+		
+		$scope.findAll = function() {
+			ProdutoService.findAll().then(
+				function() {
+					$scope.produtos = ProdutoService.data;
+					ProdutoService.data = {};
+				},
+				error
+			);
+		}
+		
+		$scope.create = function() {
+			ProdutoService.create($scope.produto).then(
+				function() {
+					alert($scope.produto.descricao + ' Salvo com sucesso!')
+				},
+				error
+			);
+		}
+		
+	}
+);

@@ -1,0 +1,24 @@
+angular.module('categoria')
+.service('CategoriaService' , 
+	[
+	 	'$http',
+	 	function CategoriaService($http) {
+	 		
+	 		var url = 'http://localhost:8080/aula-java-rest/rest/produto/';
+	 		
+	 		var callbackError = function() {
+	 		}	 			
+	 		
+	 		var callBackSuccess = function() {
+	 		}
+	 		
+	 		CategoriaService.findAll = function() {
+	 			return $http.get(url + 'find-all')
+	 			.success()
+	 			.error()
+	 		}
+	 		
+	 		return CategoriaService;
+	 	}
+	]
+) 

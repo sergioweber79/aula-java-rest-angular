@@ -1,0 +1,16 @@
+angular.module('categoria')
+.service('CategoriaService' , 
+	[
+	 	'$http',
+	 	function CategoriaService($http) {
+	 		
+	 		var url = '';
+	 		
+	 		CategoriaService.findAll = function() {
+	 			return $http.get()
+	 		}
+	 		
+	 		return CategoriaService;
+	 	}
+	]
+) 

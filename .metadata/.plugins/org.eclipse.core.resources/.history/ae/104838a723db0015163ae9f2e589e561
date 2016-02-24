@@ -1,0 +1,12 @@
+angular.module('categoria')
+.service('CategoriaService' , 
+	[
+	 	'$http',
+	 	function CategoriaService($http) {
+	 		
+	 		
+	 		
+	 		return CategoriaService;
+	 	}
+	]
+) 

@@ -3,7 +3,8 @@ angular.module('produto')
 	'ProdutoService',
 	[	
 	 	'$http',
-	 	function ProdutoService($http) {
+	 	'CategoriaService',
+	 	function ProdutoService($http, CategoriaService) {
 	 		
 	 		var url = "http://localhost:8080/aula-java-rest/rest/produto/";
 	 		
@@ -21,8 +22,18 @@ angular.module('produto')
 	 			ProdutoService.status = status;
 	 		};
 	 		
+	 		ProdutoService.getCategorias = function() {
+	 			return CategoriaService.findAll();
+	 		};
+	 		
 	 		ProdutoService.findAll = function() {
 	 			return $http.get(url + 'find-all')
+	 			.success(callbackSuccess)
+	 			.error(callbackError);
+	 		};
+	 		
+	 		ProdutoService.find = function(id) {
+	 			return $http.get(url + 'find-' + id)
 	 			.success(callbackSuccess)
 	 			.error(callbackError);
 	 		};
@@ -33,6 +44,18 @@ angular.module('produto')
 	 				data: produto,
 	 				method: 'POST'
 				}).success(callbackSuccess)
+	 			.error(callbackError);
+	 		}
+	 		
+	 		ProdutoService.update = function(produto) {
+	 			return $http.put(url + 'update', produto)
+				.success(callbackSuccess)
+	 			.error(callbackError);
+	 		}
+	 		
+	 		ProdutoService.remove = function(produto) {
+	 			return $http.delete(url + 'delete', produto)
+				.success(callbackSuccess)
 	 			.error(callbackError);
 	 		}
 	 			

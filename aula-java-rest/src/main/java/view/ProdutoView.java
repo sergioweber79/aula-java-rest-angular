@@ -2,6 +2,7 @@ package view;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -37,13 +38,14 @@ public class ProdutoView extends View<Produto> {
 	
 	@XmlElement
 	public String getValidade() {
-		return new SimpleDateFormat("dd/MM/yyyy").format(entity.getValidade());
+		Date d = entity.getValidade();
+		return d == null ? null : new SimpleDateFormat("dd/MM/yyyy").format(d);
 	}
 	
 	@XmlElement
 	public Long getCategoria() {
 		Categoria c = entity.getCategoria();
-		return c == null ? null : c.getId();
+		return c == null ? 0L : c.getId();
 	}
 	
 }
