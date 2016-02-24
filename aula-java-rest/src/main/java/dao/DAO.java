@@ -26,7 +26,6 @@ public class DAO<T extends Model<?>> {
 		return EntityManagerUtils.criarEntityManager().find(klazz, id);
 	}
 	
-	@SuppressWarnings("unchecked")
 	public List<T> findAll() {
 		Query query = EntityManagerUtils
 				.criarEntityManager()

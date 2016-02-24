@@ -16,7 +16,7 @@ import model.Produto;
 import view.ProdutoView;
 
 @Path("produto")
-public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
+public class ProdutoWS extends GenericWS<Produto, ProdutoView> {
 	
 	public ProdutoWS() {
 		super(ProdutoView.class, Produto.class);

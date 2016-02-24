@@ -6,7 +6,7 @@ angular.module('menuModule')
 		
 		$scope.menu = [
            {titulo: 'Produto', link: '/produto'},
-           {titulo: 'Cliente', link: '/cliente'}
+           {titulo: 'Categoria', link: '/cliente'}
         ];
 		
 		$scope.redirect = function(link) {

@@ -16,7 +16,7 @@ import model.Categoria;
 import view.CategoriaView;
 
 @Path("categoria")
-public class CategoriaWS extends WSGenerico<Categoria, CategoriaView>{
+public class CategoriaWS extends GenericWS<Categoria, CategoriaView> {
 
 	public CategoriaWS() {
 		super(CategoriaView.class, Categoria.class);

@@ -32,20 +32,20 @@ angular.module('categoria')
 	 			.error(callbackError);
 	 		}
 
-	 		CategoriaService.create = function(produto) {
-	 			return $http.get(url + 'create', produto)
+	 		CategoriaService.create = function(categoria) {
+	 			return $http.post(url + 'create', categoria)
 	 			.success(callBackSuccess)
 	 			.error(callbackError);
 	 		}
 	 		
-	 		CategoriaService.update = function(produto) {
-	 			return $http.put(url + 'update', produto)
+	 		CategoriaService.update = function(categoria) {
+	 			return $http.put(url + 'update', categoria)
 	 			.success(callBackSuccess)
 	 			.error(callbackError);
 	 		}
 
-	 		CategoriaService.remove = function(produto) {
-	 			return $http.delete(url + 'delete', produto)
+	 		CategoriaService.remove = function(categoria) {
+	 			return $http.delete(url + 'delete', categoria)
 	 			.success(callBackSuccess)
 	 			.error(callbackError);
 	 		}

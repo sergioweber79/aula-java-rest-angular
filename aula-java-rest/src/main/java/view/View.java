@@ -17,7 +17,8 @@ public abstract class View<T extends Model<?>> {
 	public View(T entity) {
 		this.entity = entity;
 	}
-	
+
+	//TODO verificar se o rest usa isso
 	public View() {
 	}
 	
