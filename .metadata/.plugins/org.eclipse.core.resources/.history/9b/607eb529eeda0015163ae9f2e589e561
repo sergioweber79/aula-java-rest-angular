@@ -23,7 +23,6 @@ public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
 	
 	public ProdutoWS() {
 		super(ProdutoView.class);
-		dao = new ProdutoDAO();
 	}
 	
 	@POST
