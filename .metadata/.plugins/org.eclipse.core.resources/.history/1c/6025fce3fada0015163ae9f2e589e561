@@ -1,0 +1,15 @@
+package view;
+
+import model.Categoria;
+
+public class CategoriaView extends View<Categoria> {
+
+	public CategoriaView() {
+		super(Categoria.class);
+	}
+	
+	public CategoriaView(Class<Categoria> clazz) {
+		super(clazz);
+	}
+	
+}

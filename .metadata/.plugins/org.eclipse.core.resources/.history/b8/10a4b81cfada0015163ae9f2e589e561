@@ -1,0 +1,16 @@
+package controller;
+
+import javax.persistence.Entity;
+import javax.ws.rs.Path;
+
+import view.CategoriaView;
+import model.Categoria;
+
+@Path("categoria")
+public class CategoriaWS extends WSGenerico<Categoria, CategoriaView>{
+
+	public CategoriaWS() {
+		super(CategoriaView.class);
+	}
+	
+}

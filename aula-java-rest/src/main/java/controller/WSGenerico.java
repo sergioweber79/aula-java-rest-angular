@@ -5,15 +5,23 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
+import dao.DAO;
 import model.Model;
 import view.View;
 
 public class WSGenerico<T extends Model<?>, E extends View<T>> {
 	
 	private Class<E> viewClass;
+	protected DAO<T> dao;
 	
-	public WSGenerico(Class<E> viewClass) {
+	public WSGenerico(Class<E> viewClass, Class<T> modelClass) {
 		this.viewClass = viewClass;
+		dao = new DAO<T>(modelClass);
+	}
+	
+	public WSGenerico(Class<E> viewClass, DAO<T> dao) {
+		this.viewClass = viewClass;
+		this.dao = dao;
 	}
 	
 	public List<E> getViews(List<T> models) {

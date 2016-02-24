@@ -1,0 +1,14 @@
+package controller;
+
+import javax.ws.rs.Path;
+
+import model.Categoria;
+
+@Path("categoria")
+public class CategoriaWS extends WSGenerico<Categoria, CategoriaView>{
+
+	public CategoriaWS() {
+		super(CategoriaView.class);
+	}
+	
+}

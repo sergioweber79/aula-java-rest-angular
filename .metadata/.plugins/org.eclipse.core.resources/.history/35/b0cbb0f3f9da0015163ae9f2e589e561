@@ -1,0 +1,7 @@
+package view;
+
+import model.Categoria;
+
+public class CategoriaView extends View<Categoria> {
+
+}

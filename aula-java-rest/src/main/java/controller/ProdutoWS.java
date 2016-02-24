@@ -14,16 +14,12 @@ import javax.ws.rs.core.MediaType;
 
 import model.Produto;
 import view.ProdutoView;
-import dao.ProdutoDAO;
 
 @Path("produto")
 public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
-
-	private ProdutoDAO dao;
 	
 	public ProdutoWS() {
-		super(ProdutoView.class);
-		dao = new ProdutoDAO();
+		super(ProdutoView.class, Produto.class);
 	}
 
 	@POST

@@ -2,6 +2,7 @@ package utils;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class EntityManagerUtils {
@@ -15,7 +16,10 @@ public class EntityManagerUtils {
 
 	public static EntityManager criarEntityManager() {
 		em = (em == null || !em.isOpen()) ? em = emf.createEntityManager() : em;
-		em.getTransaction().begin();
+		EntityTransaction et = em.getTransaction();
+		if(!et.isActive()) {
+			et.begin();
+		}
 		
 		return em; 
 	}

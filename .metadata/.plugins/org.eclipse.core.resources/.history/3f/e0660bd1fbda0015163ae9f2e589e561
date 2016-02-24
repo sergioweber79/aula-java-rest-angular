@@ -1,0 +1,32 @@
+package view;
+
+import javax.xml.bind.annotation.XmlValue;
+
+import model.Categoria;
+
+public class CategoriaView extends View<Categoria> {
+
+	public CategoriaView() {
+		super(Categoria.class);
+	}
+	
+	public CategoriaView(Class<Categoria> clazz) {
+		super(clazz);
+	}
+	
+	@XmlValue
+	public Long getId() {
+		return entity.getId();
+	}
+	
+	public void setId(String id) {
+	}
+	
+	public String getDescricao() {
+		return entity.getDescricao();
+	}
+	
+	public void setDescricao(String descricao) {
+	}
+	
+}

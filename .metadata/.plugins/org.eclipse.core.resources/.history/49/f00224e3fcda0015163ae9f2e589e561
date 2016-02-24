@@ -1,0 +1,23 @@
+package controller;
+
+import javax.ws.rs.Path;
+
+import dao.CategoriaDAO;
+import model.Categoria;
+import view.CategoriaView;
+
+@Path("categoria")
+public class CategoriaWS extends WSGenerico<Categoria, CategoriaView>{
+
+	private CategoriaDAO dao;
+	
+	public CategoriaWS() {
+		super(CategoriaView.class);
+		dao = new CategoriaDAO();
+	}
+	
+	public void create(Categoria categoria) {
+		dao.create(categoria);
+	}
+	
+}

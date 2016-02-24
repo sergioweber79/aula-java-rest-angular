@@ -3,6 +3,7 @@ package view;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import model.Categoria;
@@ -19,40 +20,30 @@ public class ProdutoView extends View<Produto> {
 		super(produto);
 	}
 	
+	@XmlElement
 	public Long getId() {
-		return getEntity().getId();
+		return entity.getId();
 	}
 	
-	public void setId(Long id) {
-	}
-	
+	@XmlElement
 	public String getDescricao() {
-		return getEntity().getDescricao();
+		return entity.getDescricao();
 	}
 	
-	public void setDescricao(String descricao) {
-	}
-	
+	@XmlElement
 	public BigDecimal getValor() {
-		return getEntity().getValor();
+		return entity.getValor();
 	}
 	
-	public void setValor(BigDecimal valor) {
-	}
-	
+	@XmlElement
 	public String getValidade() {
-		return new SimpleDateFormat("dd/MM/yyyy").format(getEntity().getValidade());
+		return new SimpleDateFormat("dd/MM/yyyy").format(entity.getValidade());
 	}
 	
-	public void setValidade(String validade) {
-	}
-	
+	@XmlElement
 	public Long getCategoria() {
-		Categoria c = getEntity().getCategoria();
+		Categoria c = entity.getCategoria();
 		return c == null ? null : c.getId();
-	}
-	
-	public void setCategoria(Categoria categoria) {
 	}
 	
 }
