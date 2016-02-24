@@ -32,10 +32,10 @@ public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
 	@Path("create-test")
 	public void create() {
 		for(int i = 0; i < 10; i++) {
-			Produto p = Produto.builder().descricao("produto" + i)
-			.valor(new BigDecimal(10 * i)).validade(new Date()).build();
-			dao.create(p);
+			Produto.builder().id(new Long(i)).descricao("produto" + i)
+			.valor(new BigDecimal(10 * i)).validade(new Date());
 		}
+		
 	}
 
 	@POST

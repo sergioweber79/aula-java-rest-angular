@@ -17,6 +17,7 @@ public class DAO<T extends Model<?>> {
 	}
 
 	public void create(T entity) {
+		em.getTransaction().begin();
 		EntityManager em = EntityManagerUtils.criarEntityManager();
 		em.persist(entity);
 		em.getTransaction().commit();

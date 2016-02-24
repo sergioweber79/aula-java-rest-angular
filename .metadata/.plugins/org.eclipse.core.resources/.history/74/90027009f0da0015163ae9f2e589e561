@@ -1,7 +1,5 @@
 package controller;
 
-import java.math.BigDecimal;
-import java.util.Date;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -29,15 +27,8 @@ public class ProdutoWS extends WSGenerico<Produto, ProdutoView> {
 	}
 	
 	@GET
-	@Path("create-test")
-	public void create() {
-		for(int i = 0; i < 10; i++) {
-			Produto p = Produto.builder().descricao("produto" + i)
-			.valor(new BigDecimal(10 * i)).validade(new Date()).build();
-			dao.create(p);
-		}
-	}
-
+	@Path()
+	
 	@POST
 	@Path("create")
 	@Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })

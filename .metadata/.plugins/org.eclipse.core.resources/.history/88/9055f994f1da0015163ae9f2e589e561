@@ -2,7 +2,6 @@ package dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
 import model.Model;
@@ -17,9 +16,8 @@ public class DAO<T extends Model<?>> {
 	}
 
 	public void create(T entity) {
-		EntityManager em = EntityManagerUtils.criarEntityManager();
-		em.persist(entity);
-		em.getTransaction().commit();
+		EntityManagerUtils.criarEntityManager()
+		EntityManagerUtils.criarEntityManager().persist(entity);
 	}
 	
 	public T find(Object id) {
@@ -35,15 +33,11 @@ public class DAO<T extends Model<?>> {
 	}
 	
 	public void update(T entity) {
-		EntityManager em = EntityManagerUtils.criarEntityManager();
-		em.merge(entity);
-		em.getTransaction().commit();
+		EntityManagerUtils.criarEntityManager().merge(entity);
 	}
 	
 	public void delete(T entity) {
-		EntityManager em = EntityManagerUtils.criarEntityManager();
-		em.remove(entity);
-		em.getTransaction().commit();
+		EntityManagerUtils.criarEntityManager().remove(entity);
 	}
 	
 }

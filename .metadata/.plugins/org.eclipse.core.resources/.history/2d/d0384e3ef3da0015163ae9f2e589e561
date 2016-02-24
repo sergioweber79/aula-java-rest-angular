@@ -38,12 +38,11 @@ public class DAO<T extends Model<?>> {
 		EntityManager em = EntityManagerUtils.criarEntityManager();
 		em.merge(entity);
 		em.getTransaction().commit();
+		EntityManagerUtils.criarEntityManager().merge(entity);
 	}
 	
 	public void delete(T entity) {
-		EntityManager em = EntityManagerUtils.criarEntityManager();
-		em.remove(entity);
-		em.getTransaction().commit();
+		EntityManagerUtils.criarEntityManager().remove(entity);
 	}
 	
 }
