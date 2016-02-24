@@ -2135,3 +2135,11 @@
 2016-02-24 09:49:52,739 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2016-02-24 09:49:52,741 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-02-24 09:49:52,741 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/java08/workspace/aula-java/aula-java-rest/aula-java-rest/src/test/resources
+2016-02-24 09:52:01,474 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-24 09:52:01,475 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-02-24 09:52:01,477 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-24 09:52:01,477 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/java08/workspace/aula-java/aula-java-rest/aula-java-rest/src/test/resources
+2016-02-24 09:52:04,576 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-24 09:52:04,576 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-02-24 09:52:04,584 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-02-24 09:52:04,584 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/java08/workspace/aula-java/aula-java-rest/aula-java-rest/src/test/resources
