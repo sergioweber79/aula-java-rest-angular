@@ -1,0 +1,43 @@
+<!-- Exemplo de diretivas -->
+
+<!DOCTYPE html>
+<html>
+	<body ng-app="myApp2">
+		
+		<script src="resources/js/angular.js"></script>
+
+		<div ng-controller="directiveCtrl">
+   			<redirect ng-click="funcao()" path="rest">Redirecionar</redirect>
+		</div>
+
+		<script>
+	        var app = angular.module("myApp2", []);
+	        app.controller('directiveCtrl', function($scope, $http) {
+	            $scope.funcao = function() {
+	            	alert('fdsfdsaf');
+	            };
+	        }).directive('redirect', function () {
+	            return {
+	                restrict: 'E', 'C', 'A',
+	                //'E' significa restrito a elementos
+	                //'C' significa restrito a classe
+	                //'A' significa restrito a atributo
+	                replace: true,
+	                scope:  {
+	                    path: '='
+	                },
+	                template: '<button ng-click="funcao()">Bot�o</button>'
+	            };
+	        });
+    	</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+

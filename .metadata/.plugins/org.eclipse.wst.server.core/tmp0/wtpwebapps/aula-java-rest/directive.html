@@ -12,18 +12,22 @@
 
 		<script>
 	        var app = angular.module("myApp2", []);
-	        app.controller('directiveCtrl', function($scope, $http) {
+	        app.controller('directiveCtrl', function($scope, $location) {
 	            $scope.funcao = function() {
-	            	alert('fdsfdsaf');
+	            	$location.path("google.com");
 	            };
 	        }).directive('redirect', function () {
 	            return {
 	                restrict: 'E',
-	                //'E' significa que é restrito a elementos
+	                //'E' significa restrito a elementos
+	                //'C' significa restrito a classe
+	                //'A' significa restrito a atributo
 	                replace: true,
+	                //se ele substitui a tag
 	                scope:  {
 	                    path: '='
 	                },
+	                //forma de comunicação
 	                template: '<button ng-click="funcao()">Bot�o</button>'
 	            };
 	        });

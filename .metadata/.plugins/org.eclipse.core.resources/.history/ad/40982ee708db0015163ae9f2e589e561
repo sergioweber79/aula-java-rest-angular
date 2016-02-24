@@ -1,0 +1,28 @@
+
+<!-- Exemplo de ng-model e ng- binding -->
+
+<!DOCTYPE html>
+<html>
+    <script src="resources/js/angular.js"></script>
+    <body ng-app="myApp1">
+
+	    <div ng-controller="modelCtrl">
+	        <p ng-repeat="n in names | filter:name">{{n}}</p>
+	        
+	        <input ng-model="name"/>
+	        
+	        <button ng-click="fn()">Nome</button>
+	    </div>
+
+	    <script>
+	        var app = angular.module("myApp1", []);
+	        app.controller("modelCtrl", function($scope) {
+	            $scope.name = "Renan";
+	            
+	            $scope.mostraEsconde = function() {
+					alert($scope.name);	            	
+	            };
+	        });
+	    </script>
+	</body>
+</html>

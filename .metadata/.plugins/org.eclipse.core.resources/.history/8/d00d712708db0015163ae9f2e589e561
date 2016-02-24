@@ -1,0 +1,37 @@
+
+<!-- Exemplo de ng-model e ng- binding -->
+
+<!DOCTYPE html>
+<html>
+    <script src="resources/js/angular.js"></script>
+    <body ng-app="myApp1">
+
+	    <div ng-controller="modelCtrl">
+	        <p>{{name}}</p>
+	        <input ng-model="name"/>
+	        
+	        <p ng-repeat="var n in names">{{n}}</p>
+	        
+	        <button ng-click="fn()">Nome</button>
+	    </div>
+
+	    <script>
+	        var app = angular.module("myApp1", []);
+	        app.controller("modelCtrl", function($scope) {
+	            $scope.name = "Renan";
+	            
+	            $scope.fn = function() {
+					alert($scope.name);	            	
+	            };
+	            
+	            $scope.names = [
+                	"Renan",
+                	"Francisco",
+                	"João",
+                	"Maria"
+                ];
+	            		
+	        });
+	    </script>
+	</body>
+</html>

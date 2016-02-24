@@ -1,6 +1,6 @@
-mostrar como funciona a aplicação
+mostrar como funciona a aplicaï¿½ï¿½o
 
-mostrar como usar as expressões {{}}
+mostrar como usar as expressï¿½es {{}}
 
 mostrar como funciona o controller
 
@@ -10,9 +10,9 @@ mostrar como funciona o binding
 
 mostrar como funcionam as diretivas
 
-mostrar como funciona o filter
-
 mostrar como funciona o repeat
+
+mostrar como funciona o filter
 
 mostrar como funciona o select e options, mostrar como funciona checkbox e radio
 
@@ -28,8 +28,8 @@ explicar sobre assincronicidade
 
 mostrar como funciona template e o ng-route
 
-mostrar como são inseridas as rotas no ng-vew e os arquivos no ng-include
+mostrar como sï¿½o inseridas as rotas no ng-vew e os arquivos no ng-include
 
 exercicio, montar menu de cadastro para as classes que foram modeladas
-utilizando templates, com validações para mostra dos itens, envio para os services,
+utilizando templates, com validaï¿½ï¿½es para mostra dos itens, envio para os services,
 tratamento de erros e mensagens de sucesso.
