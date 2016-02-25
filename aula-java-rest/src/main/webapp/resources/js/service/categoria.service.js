@@ -45,7 +45,11 @@ angular.module('categoria')
 	 		}
 
 	 		CategoriaService.remove = function(categoria) {
-	 			return $http.delete(url + 'delete', categoria)
+	 			return $http({
+	 				url: url + 'delete',
+	 				data: categoria,
+	 				method: 'DELETE'
+	 			})
 	 			.success(callBackSuccess)
 	 			.error(callbackError);
 	 		}

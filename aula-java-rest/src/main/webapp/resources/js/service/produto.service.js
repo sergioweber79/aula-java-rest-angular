@@ -54,7 +54,11 @@ angular.module('produto')
 	 		}
 	 		
 	 		ProdutoService.remove = function(produto) {
-	 			return $http.delete(url + 'delete', produto)
+	 			return $http({
+	 				url: url + 'delete',
+	 				data: produto,
+	 				method: 'DELETE'
+	 			})
 				.success(callbackSuccess)
 	 			.error(callbackError);
 	 		}
