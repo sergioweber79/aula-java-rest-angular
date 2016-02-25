@@ -12,12 +12,12 @@ import view.View;
 public class GenericWS<T extends Model<?>, E extends View<T>> {
 	
 	private Class<E> viewClass;
-	protected DAO<T> dao;
+	protected DAO<T> dao;  
 	
 	public GenericWS(Class<E> viewClass, Class<T> modelClass) {
 		this.viewClass = viewClass;
 		dao = new DAO<>(modelClass);
-	}
+	} 
 	
 	public GenericWS(Class<E> viewClass, DAO<T> dao) {
 		this.viewClass = viewClass;

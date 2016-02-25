@@ -9,7 +9,7 @@ public class EntityManagerUtils {
 
 	private static EntityManagerFactory emf;
 	private static EntityManager em;
-
+   
 	public static void criarConexao() {
 		emf = Persistence.createEntityManagerFactory("rest");
 	}
