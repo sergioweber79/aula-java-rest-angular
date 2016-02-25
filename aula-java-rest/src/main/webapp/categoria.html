@@ -6,14 +6,6 @@
 	</div>
 	Descrição: <input type="text" ng-model="produto.descricao" />
 	<br />
-	Valor: <input type="text" ng-model="produto.valor" />
-	<br /> 
-	Validade:<input type="date" ng-model="produto.validade" /> 
-	<br /> 
-	Categoria: <select>
-		<option ng-repeat="c in categorias">{{c.descricao}}</option>
-	</select> 
-	<br /> 
 	
 	Update:<input type="radio" 
 				  ng-checked="updateValue"
@@ -33,5 +25,5 @@
 	<button ng-click="delete()">DELETE</button>
 	<br />
 	
-	<p ng-repeat="p in produtos">{{p}}</p>
+	<p ng-repeat="c in categorias">{{c}}</p>
 </div>

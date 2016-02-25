@@ -6,7 +6,7 @@ angular.module('app', [
 
 	$routeProvider
 	.when('/produto', {
-		templateUrl: '../../aula-java-rest/produto.html',
+		templateUrl: '../../aula-java-rest/produtotemplate.html',
 		controller: 'ProdutoCtrl'
     })
     .when('/produto', {

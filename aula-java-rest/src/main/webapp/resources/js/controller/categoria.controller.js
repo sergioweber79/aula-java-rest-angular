@@ -9,7 +9,14 @@ $wangular.module('categoria')
 			console.log("Status = " + CategoriaService.status);
 			console.log("Error = " + CategoriaService.error);
 		};
+		
+		$scope.updateValue = false;
+		$scope.mudaUpdate = function() {
+			$scope.updateValue = !$scope.updateValue;	
+			$scope.categoria.id = undefined;
+		};		
 
+		$scope.categoria.id = '';
 		$scope.find = function() {
 			CategoriaService.find($scope.categoria).then(
 				function() {
